@@ -4,8 +4,8 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #0f0f0f;
-    color: #ece7e7;
+    background-color:#0f0f0f;
+    color: #e8e8e8;
     font-family: 'Climate Crisis', serif;
     overflow: hidden;
     display: flex;
@@ -52,4 +52,33 @@ body, html {
     color: #e8e8e8;
     text-align: center;
     text-rendering: optimizeLegibility;
+}
+
+/* --- Media Queries pour le responsive design --- */
+
+/* Tablettes (moins de 768px) */
+@media (max-width: 768px) {
+    .primary-text {
+        font-size: 60px;
+    }
+
+    .secondary-text {
+        font-size: 32px;
+    }
+}
+
+/* Mobiles (moins de 480px) */
+@media (max-width: 480px) {
+    .primary-text {
+        font-size: 40px;
+    }
+
+    .secondary-text {
+        font-size: 24px;
+    }
+
+    .secondary-text-wrapper {
+        top: 10px;
+        left: 10px;
+    }
 }
