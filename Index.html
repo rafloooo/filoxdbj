@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album commun</title>
+    <!-- Import des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Texte secondaire (statique en haut à gauche) -->
+        <div class="secondary-text-wrapper">
+            <h2 class="secondary-text">Filo x DoubleJ</h2>
+        </div>
+
+        <!-- Texte primaire avec effet parallax -->
+        <div class="primary-text-wrapper parallax-layer" data-depth="0.2">
+            <h1 class="primary-text">Album commun</h1>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script>
+        const layer = document.querySelector('.parallax-layer');
+
+        // Centrage initial
+        layer.style.transform = 'translate(-50%, -50%)';
+
+        // Gestion du parallax
+        document.addEventListener('mousemove', (e) => {
+            const { innerWidth, innerHeight } = window;
+
+            // Position normalisée entre -1 et 1
+            const posX = (e.clientX / innerWidth - 0.5) * 2;
+            const posY = (e.clientY / innerHeight - 0.5) * 2;
+
+            // Appliquer le mouvement parallax
+            const depth = parseFloat(layer.getAttribute('data-depth'));
+            const offsetX = posX * depth * 50;
+            const offsetY = posY * depth * 50;
+
+            layer.style.transform = `translate3d(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px), 0)`;
+        });
+    </script>
+</body>
+</html>
