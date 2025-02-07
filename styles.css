@@ -59,22 +59,22 @@ body, html {
 /* Tablettes (moins de 768px) */
 @media (max-width: 768px) {
     .primary-text {
-        font-size: 60px;
+        font-size: 30px;
     }
 
     .secondary-text {
-        font-size: 32px;
+        font-size: 24px;
     }
 }
 
 /* Mobiles (moins de 480px) */
 @media (max-width: 480px) {
     .primary-text {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .secondary-text {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .secondary-text-wrapper {
